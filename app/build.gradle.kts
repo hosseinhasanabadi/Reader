@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -66,4 +70,41 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+
+//firebase/firestore
+    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.52")
+    kapt("com.google.dagger:hilt-android-compiler:2.52")
+
+    //navigation
+    implementation("androidx.navigation:navigation-compose:2.8.0")
+
+    //coroutines     // Coroutines Android Library
+ implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    // Coroutines Core Library
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+
+
+
+    // Coroutines with Lifecycle for Jetpack Compose
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+
+    // For ViewModel Coroutines support
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.7.0")
+
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

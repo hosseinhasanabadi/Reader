@@ -26,6 +26,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.readerapp.components.ReaderLogo
 import com.example.readerapp.navagation.ReaderScreens
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
@@ -74,8 +75,7 @@ fun ReaderSplashScreen(
        Column(modifier = Modifier.padding(1.dp),
            verticalArrangement = Arrangement.Center
            , horizontalAlignment = Alignment.CenterHorizontally) {
-           Text(text = "A.Reader", color = Color.Red.copy(alpha = 0.5f)
-               , style = MaterialTheme.typography.displaySmall)
+           ReaderLogo()
            Spacer(modifier = Modifier.height(15.dp))
            Text(text = "\"Read Chang Yourself\"", color = Color.LightGray
                , style = MaterialTheme.typography.headlineSmall)

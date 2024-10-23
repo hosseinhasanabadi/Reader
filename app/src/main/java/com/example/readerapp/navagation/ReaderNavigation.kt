@@ -2,6 +2,7 @@ package com.example.readerapp.navagation
 
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -12,6 +13,7 @@ import com.example.readerapp.screens.search.SearchScreen
 import com.example.readerapp.screens.splash.ReaderSplashScreen
 import com.example.readerapp.screens.upddate.BookUpdateScreen
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun ReaderNavigation() {
     val navController = rememberNavController()
